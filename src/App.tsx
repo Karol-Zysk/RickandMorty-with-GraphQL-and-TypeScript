@@ -1,12 +1,13 @@
 import React from "react";
-import "./App.css";
+import { Container } from "./App.style";
+import CharactersList from "./components/CharactersList/CharactersList";
 
 function App() {
   return (
-    <div className="App">
+    <Container>
       <h1>Learn GraphQL</h1>
-      
-    </div>
+      <CharactersList />
+    </Container>
   );
 }
 
