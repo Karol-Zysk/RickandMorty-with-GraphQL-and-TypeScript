@@ -3,3 +3,4 @@ export type CharacterProps = {
   name: string;
   id: number;
 };
+

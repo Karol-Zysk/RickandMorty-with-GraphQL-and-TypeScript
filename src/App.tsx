@@ -1,12 +1,17 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import { Container } from "./App.style";
-import CharactersList from "./components/CharactersList/CharactersList";
+import CharacterInfo from "./pages/CharacterInfo/CharacterInfo";
+import CharactersList from "./pages/CharactersList/CharactersList";
 
 function App() {
   return (
     <Container>
       <h1>Learn GraphQL</h1>
-      <CharactersList />
+      <Routes>
+        <Route  path="/" element={<CharactersList />} />
+        <Route path="/:id" element={<CharacterInfo />} />
+      </Routes>
     </Container>
   );
 }
