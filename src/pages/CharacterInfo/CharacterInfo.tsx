@@ -29,6 +29,7 @@ const CharacterInfo = () => {
       </Info>
 
       <Episodes>
+        <h2>Performed In:</h2>
         {episode.map((episode: Episode) => {
           return (
             <p key={episode.episode}>

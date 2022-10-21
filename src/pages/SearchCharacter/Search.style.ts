@@ -29,3 +29,8 @@ export const Button = styled.button`
   font-weight: bold;
   border-radius: 1rem;
 `;
+
+export const ListItem = styled.li`
+  font-size: 1.2rem;
+  color: darkblue;
+`;

@@ -1,6 +1,6 @@
 import { gql, useLazyQuery } from "@apollo/client";
 import { useState } from "react";
-import { Button, Container, SearchInput, Wrapper } from "./Search.style";
+import { Button, Container, SearchInput, Wrapper, ListItem } from "./Search.style";
 
 interface Character {
   location: { name: string };
@@ -30,6 +30,7 @@ const Search = () => {
 
   return (
     <Container>
+      <h2>Enter character name to see his locations</h2>
       <SearchInput
         value={name}
         onChange={(e) => {
@@ -50,7 +51,7 @@ const Search = () => {
         {data && (
           <ul>
             {data.characters.results.map((character: Character) => {
-              return <li>{character.location.name}</li>;
+              return <ListItem>{character.location.name}</ListItem>;
             })}
           </ul>
         )}
